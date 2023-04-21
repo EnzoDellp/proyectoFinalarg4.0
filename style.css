@@ -1,0 +1,66 @@
+.espaciado {
+  padding-bottom: 2rem;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+header h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #578888;
+}
+body {
+  background-color: #2b6ea1;
+}
+.card {
+  color: white;
+}
+.btn-mas {
+  background-color: #578888;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  color: white;
+}
+.logo {
+  width: 30%;
+  margin-left: 2rem;
+}
+
+.nosotros {
+  font-size: 16px;
+}
+.slogan-container {
+  color: black;
+  background-image: url("src/banner-logo.webp");
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  padding: 50px;
+  margin-top: 4.5rem;
+}
+
+.slogan-text {
+  color: black;
+  color: rgb(0, 0, 0);
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 50px;
+}
+.slogan-textos {
+  color: rgb(255, 255, 255);
+}
+.slogan-p {
+  color: black;
+  font-weight: bold;
+  font-size: 1.9rem;
+}
