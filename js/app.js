@@ -4,22 +4,35 @@ const navbarCollapse = document.querySelector(".navbar-collapse");
 navbarToggler.addEventListener("click", function () {
   navbarCollapse.classList.toggle("show");
 });
-let ropa = [];
-
+//api
 const consultarApiRopa = async () => {
-  const data = await fetch("https://fakestoreapi.com/products");
-  const dataParse = await data.json();
-  return dataParse;
+  const dataMens = await fetch(
+    "https://fakestoreapi.com/products/category/men's clothing"
+  );
+  const dataMensParse = await dataMens.json();
+  const dataWomens = await fetch(
+    "https://fakestoreapi.com/products/category/women's clothing"
+  );
+  const dataWomensParse = await dataWomens.json();
+
+  const allData = dataMensParse.concat(dataWomensParse);
+  return allData;
 };
 
 const tests = async () => {
   const ropa = await consultarApiRopa();
 
+  for (let i = 0; i < 9; i++) {
+    document.getElementById("card-title-" + i).innerHTML = ropa[i].title;
+    document.getElementById("card-description-" + i).innerHTML =
+      ropa[i].description.slice(0, 100) + "...";
+    document.getElementById("card-image-" + i).src = ropa[i].image;
+    document.getElementById("card-price-" + i).innerHTML = "$" + ropa[i].price;
+  }
   console.log(ropa);
 };
 
 tests();
-
 //validacion del formulario
 
 const formulario = document.querySelector("form");
